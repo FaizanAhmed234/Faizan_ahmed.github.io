@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Faizan Ahmed — Python, AI and automation developer">
+<title>Faizan Ahmed | Portfolio</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--text:#191919;--muted:#777;--border:#e6e6e2;--accent:#7060ed}
+[data-theme="dark"]{--bg:#101010;--card:#191919;--text:#f5f5f5;--muted:#aaa;--border:#303030;--accent:#a99cff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+.container{width:min(1000px,calc(100% - 36px));margin:auto}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--border)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-size:17px;font-weight:800;letter-spacing:-.6px}
+.logo span,.accent{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--muted)}
+.theme{background:var(--card);border:1px solid var(--border);color:var(--text);padding:8px 11px;border-radius:30px;cursor:pointer}
+.hero{padding:105px 0 90px}
+.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-size:clamp(43px,8vw,76px);line-height:1.08;letter-spacing:-3.5px;margin:25px 0}
+.intro{max-width:550px;color:var(--muted);font-size:16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:11px 17px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:650;transition:transform .2s}
+.btn:hover,.project:hover{transform:translateY(-4px)}
+.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+section{padding:65px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+h2{font-size:29px;letter-spacing:-1px}
+.sub{font-size:13px;color:var(--muted);margin-top:5px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.project{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:25px;min-height:245px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.project:hover{border-color:var(--accent)}
+.project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.symbol{width:43px;height:43px;display:grid;place-items:center;border-radius:11px;background:var(--bg);font-size:22px}
+.number{font-size:12px;color:var(--muted)}
+h3{font-size:19px;letter-spacing:-.4px;margin-bottom:8px}
+.description{color:var(--muted);font-size:13px;line-height:1.8}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 20px}
+.tag{font-size:11px;padding:4px 9px;border-radius:5px;background:var(--bg);color:var(--muted)}
+.project-link{margin-top:auto;font-size:13px;font-weight:650;color:var(--accent)}
+.about-box,.contact-box{border:1px solid var(--border);background:var(--card);padding:28px;border-radius:14px}
+.about-box p,.contact-box p{max-width:650px;color:var(--muted);font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.skill{border:1px solid var(--border);padding:7px 12px;border-radius:7px;font-size:12px}
+footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted);font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{animation:appear .7s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:700px){.project:nth-child(2){animation-delay:.08s}.project:nth-child(3){animation-delay:.15s}.project:nth-child(4){animation-delay:.22s}}
+@media(max-width:600px){.nav{height:62px}.nav-right{gap:12px}.nav-links{gap:12px}.nav-links a{font-size:12px}.hero{padding:78px 0 60px}h1{letter-spacing:-2.5px}.grid{grid-template-columns:1fr}.project{min-height:220px}section{padding:48px 0}.section-head{align-items:start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav">
+<a class="logo" href="#">faizan<span>.</span></a>
+<div class="nav-right">
+<div class="nav-links">
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+<button class="theme" id="theme" aria-label="Switch colour theme">☾ Dark</button>
+</div>
+</div>
+</nav>
+
+<main>
+<header class="container hero reveal">
+<p class="eyebrow">Python Developer · AI & Automation</p>
+<h1>Building useful things<br>with <span>code & AI.</span></h1>
+<p class="intro">I'm Faizan Ahmed. I build practical applications, intelligent tools and automation systems designed to solve real-world problems.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">Explore my work ↗</a>
+<a class="btn" href="https://github.com/">GitHub profile ↗</a>
+</div>
+</header>
+
+<section id="projects">
+<div class="container">
+<div class="section-head">
+<div><p class="eyebrow">Selected work</p><h2>Projects<span class="accent">.</span></h2><p class="sub">A collection of things I've built.</p></div>
+<p class="sub">01 — 04</p>
+</div>
+<div class="grid">
+
+<article class="project reveal">
+<div class="project-top"><div class="symbol">◫</div><span class="number">01 / FINANCE</span></div>
+<h3>Spending Planner</h3>
+<p class="description">A personal finance dashboard to organise expenses, track spending and understand financial habits.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Dashboard</span></div>
+<a class="project-link" href="https://github.com/" target="_blank" rel="noopener">View project ↗</a>
+</article>
+
+<article class="project reveal">
+<div class="project-top"><div class="symbol">✳</div><span class="number">02 / ARTIFICIAL INTELLIGENCE</span></div>
+<h3>Gemini AI Chatbot</h3>
+<p class="description">An interactive chatbot powered by Google's Gemini AI for conversational assistance.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Gemini API</span><span class="tag">AI</span></div>
+<a class="project-link" href="https://github.com/" target="_blank" rel="noopener">View project ↗</a>
+</article>
+
+<article class="project reveal">
+<div class="project-top"><div class="symbol">▦</div><span class="number">03 / HOSPITALITY</span></div>
+<h3>Restaurant Booking System</h3>
+<p class="description">A reservation management application designed to make restaurant bookings easier to organise.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Bookings</span><span class="tag">Automation</span></div>
+<a class="project-link" href="https://github.com/" target="_blank" rel="noopener">View project ↗</a>
+</article>
+
+<article class="project reveal">
+<div class="project-top"><div class="symbol">▤</div><span class="number">04 / DOCUMENT AI</span></div>
+<h3>PDF & Photo Summarizer</h3>
+<p class="description">An AI-assisted tool for extracting useful information and summarising documents and images.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">Documents</span></div>
+<a class="project-link" href="https://github.com/" target="_blank" rel="noopener">View project ↗</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="section-head"><div><p class="eyebrow">A little about me</p><h2>Curious by nature.</h2></div></div>
+<div class="about-box">
+<p>I'm a developer interested in Python, artificial intelligence and automation. I enjoy turning ideas into working applications and learning how technology can solve everyday problems. I'm continually improving my skills by building and refining real projects.</p>
+<div class="skills"><span class="skill">Python</span><span class="skill">AI & APIs</span><span class="skill">Streamlit</span><span class="skill">Git & GitHub</span><span class="skill">Automation</span></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-head"><div><p class="eyebrow">Get in touch</p><h2>Let's connect<span class="accent">.</span></h2></div></div>
+<div class="contact-box">
+<p>Have a project idea or want to collaborate? Find me on GitHub or explore my work.</p>
+<div class="actions">
+<a class="btn primary" href="https://github.com/">GitHub ↗</a>
+<a class="btn" href="#projects">Explore projects</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-inner">
+<span>© <span id="year"></span> Faizan Ahmed</span>
+<span>Designed with simplicity in mind.</span>
+</div>
+</footer>
+
+<script>
+const root = document.documentElement;
+const toggle = document.getElementById("theme");
+
+function setTheme(theme) {
+root.dataset.theme = theme;
+toggle.textContent = theme === "dark" ? "☀ Light" : "☾ Dark";
+try { localStorage.setItem("portfolio-theme", theme); } catch (e) {}
+}
+
+let savedTheme = "light";
+try { savedTheme = localStorage.getItem("portfolio-theme") || "light"; } catch (e) {}
+setTheme(savedTheme);
+
+toggle.addEventListener("click", () => {
+setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
